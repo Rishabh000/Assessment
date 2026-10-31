@@ -1,0 +1,18 @@
+[project]
+name = "mcp-gateway-assessment"
+version = "0.1.0"
+description = "Runnable MCP and LLM gateway assessment reference implementation"
+requires-python = ">=3.11"
+dependencies = [
+  "aiohttp>=3.10,<4",
+  "mcp>=1.9,<2",
+  "pydantic>=2.7,<3",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=8", "pytest-asyncio>=0.23"]
+
+[tool.pytest.ini_options]
+asyncio_mode = "auto"
+testpaths = ["tests"]
+
